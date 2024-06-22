@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #f1f1f1;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    margin: 300px auto;
+}
+#botonApagar{
+    display: none;
+}
+.labelSwitch{
+  display: flex;
+  background: #aaa;
+  width: 400px;
+  height: 200px;
+  border-radius: 100px;
+  position: relative;
+}
+.labelSwitch::after{
+    position: absolute;
+    content: "";
+    background: #fff;
+    width: 150px;
+    height: 150px;
+    top: 25px;
+    left: 15px;
+    border-radius: 100px;
+    transition: left 1s;
+}
+
+.labelSwitch.active::after {
+    left: 235px;
+  }
